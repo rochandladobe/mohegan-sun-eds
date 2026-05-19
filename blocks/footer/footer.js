@@ -5,7 +5,7 @@ export default async function decorate(block) {
       <div class="footer-content">
         <div class="footer-top">
           <a href="/" class="footer-logo">
-            <img src="/icons/mohegan-sun-logo-white.png" alt="Mohegan Sun" width="150" height="80"/>
+            <img src="/icons/mohegan-sun-logo-white.jpg" alt="Mohegan Sun" width="150" height="80"/>
           </a>
         </div>
         <div class="footer-columns">
@@ -46,7 +46,7 @@ export default async function decorate(block) {
             <a href="https://www.instagram.com/mohegansun" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
           </div>
           <p class="footer-legal">Must be 21 or older to gamble. Gambling Problem? Call 1-888-789-7777 or visit ccpg.org.</p>
-          <p class="footer-copyright">Â© ${new Date().getFullYear()} Mohegan Sun. All Rights Reserved.</p>
+          <p class="footer-copyright">© ${new Date().getFullYear()} Mohegan Sun. All Rights Reserved.</p>
         </div>
       </div>`;
     return;
