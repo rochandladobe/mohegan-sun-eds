@@ -6,7 +6,7 @@ export default async function decorate(block) {
         <nav class="nav" id="nav" aria-expanded="false">
           <div class="nav-brand">
             <a href="/" aria-label="Mohegan Sun">
-              <img src="/icons/mohegan-sun-logo.png" alt="Mohegan Sun" width="185" height="100"/>
+              <img src="/icons/mohegan-sun-logo.jpg" alt="Mohegan Sun" width="185" height="100"/>
             </a>
           </div>
           <div class="nav-sections">
