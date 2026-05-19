@@ -1,2 +1,4 @@
 mountpoints:
-/: https://content.da.live/rochandladobe/mohegan-sun-eds/
+/:
+url: https://content.da.live/rochandladobe/mohegan-sun-eds/
+type: markup
