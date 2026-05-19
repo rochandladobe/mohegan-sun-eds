@@ -1,0 +1,172 @@
+/*
+ * Mohegan Sun EDS - styles.css
+ * Brand: Deep purple #372343, Navy #263A65, Dark navy #1E2F3D
+ */
+
+@font-face {
+  font-family: mohegan-sans-fallback;
+  size-adjust: 100%;
+  ascent-override: 95%;
+  src: local('Arial');
+}
+
+:root {
+  /* Mohegan Sun brand colors */
+  --color-white: #fff;
+  --color-black: #1a1a1a;
+  --color-gray-light: #eeeeee;
+  --color-gray-mid: #cccccc;
+  --color-gray: #767676;
+  --color-ms-purple: #372343;
+  --color-ms-purple-dark: #261830;
+  --color-ms-navy: #263A65;
+  --color-ms-navy-dark: #1E2F3D;
+  --color-ms-gold: #c9a84c;
+  --color-link: #263A65;
+  --color-link-hover: #372343;
+
+  /* fonts */
+  --body-font-family: 'mohegan-sans', mohegan-sans-fallback, Arial, Helvetica, sans-serif;
+  --heading-font-family: var(--body-font-family);
+  --fixed-font-family: 'Roboto Mono', menlo, consolas, monospace;
+
+  /* body sizes */
+  --body-font-size-m: 16px;
+  --body-font-size-s: 14px;
+  --body-font-size-xs: 12px;
+
+  /* heading sizes */
+  --heading-font-size-xxl: 48px;
+  --heading-font-size-xl: 36px;
+  --heading-font-size-l: 28px;
+  --heading-font-size-m: 22px;
+  --heading-font-size-s: 18px;
+  --heading-font-size-xs: 16px;
+
+  /* nav height */
+  --nav-height: 80px;
+}
+
+@media (width >= 900px) {
+  :root {
+    --heading-font-size-xxl: 60px;
+    --heading-font-size-xl: 48px;
+    --heading-font-size-l: 36px;
+    --heading-font-size-m: 28px;
+    --heading-font-size-s: 22px;
+    --heading-font-size-xs: 18px;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { text-rendering: optimizelegibility; -webkit-font-smoothing: antialiased; }
+
+body {
+  font-size: var(--body-font-size-m);
+  margin: 0;
+  font-family: var(--body-font-family);
+  line-height: 1.6;
+  color: var(--color-black);
+  background-color: var(--color-white);
+  display: none;
+}
+
+body.appear { display: block; }
+
+header { height: var(--nav-height); }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font-family);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  scroll-margin: calc(var(--nav-height) + 1em);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+h1 { font-size: var(--heading-font-size-xxl) }
+h2 { font-size: var(--heading-font-size-xl) }
+h3 { font-size: var(--heading-font-size-l) }
+h4 { font-size: var(--heading-font-size-m) }
+h5 { font-size: var(--heading-font-size-s) }
+h6 { font-size: var(--heading-font-size-xs) }
+
+p, dl, ol, ul, pre, blockquote { margin-top: 0.8em; margin-bottom: 0.25em; }
+
+a:any-link { color: var(--color-link); text-decoration: none; }
+a:hover { text-decoration: underline; color: var(--color-link-hover); }
+
+/* buttons */
+a.button:any-link, button {
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-s);
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 2px solid transparent;
+  padding: 12px 28px;
+  cursor: pointer;
+  color: var(--color-white);
+  background-color: var(--color-ms-navy);
+  border-radius: 3px;
+  white-space: nowrap;
+  display: inline-block;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+a.button:hover, button:hover {
+  background-color: var(--color-ms-purple);
+  text-decoration: none;
+}
+
+a.button.secondary, button.secondary {
+  background-color: transparent;
+  border: 2px solid var(--color-ms-navy);
+  color: var(--color-ms-navy);
+}
+
+a.button.secondary:hover {
+  background-color: var(--color-ms-navy);
+  color: var(--color-white);
+}
+
+main img { max-width: 100%; width: auto; height: auto; }
+
+.icon { display: inline-block; height: 24px; width: 24px; }
+.icon img { height: 100%; width: 100%; }
+
+/* sections */
+main .section { padding: 40px 24px; }
+
+@media (width >= 600px) { main .section { padding: 48px 32px; } }
+
+@media (width >= 900px) {
+  main .section {
+    padding: 64px 48px;
+    max-width: 1440px;
+    margin: auto;
+  }
+}
+
+main .section.dark {
+  background-color: var(--color-ms-navy-dark);
+  color: var(--color-white);
+}
+main .section.dark h1,
+main .section.dark h2,
+main .section.dark h3 { color: var(--color-white); }
+
+main .section.purple {
+  background-color: var(--color-ms-purple);
+  color: var(--color-white);
+}
+main .section.purple h1,
+main .section.purple h2,
+main .section.purple h3 { color: var(--color-white); }
+
+main .section.light { background-color: var(--color-gray-light); }

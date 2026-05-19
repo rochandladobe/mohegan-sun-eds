@@ -1,0 +1,26 @@
+.promo-cards .promo-cards-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.promo-card {
+  display: flex;
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: box-shadow 0.2s;
+}
+
+.promo-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.18); }
+
+.promo-card-image { flex: 0 0 120px; }
+.promo-card-image img { width: 120px; height: 100%; object-fit: cover; display: block; }
+
+.promo-card-body { padding: 16px; flex: 1; }
+.promo-card-body h3 { margin: 0 0 6px; font-size: 15px; color: #1E2F3D; }
+.promo-card-body p { font-size: 13px; color: #767676; margin: 0; }

@@ -1,0 +1,125 @@
+.hero-carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  min-height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-color: #1E2F3D;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  padding: 0;
+}
+
+.carousel-slide::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
+}
+
+.carousel-slide > div {
+  position: relative;
+  z-index: 1;
+  padding: 48px;
+  max-width: 700px;
+  color: #fff;
+}
+
+.carousel-slide h1,
+.carousel-slide h2,
+.carousel-slide h3 {
+  color: #fff;
+  font-size: clamp(24px, 4vw, 48px);
+  margin: 0 0 12px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.carousel-slide p {
+  color: rgba(255,255,255,0.9);
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.carousel-slide .button-container a.button {
+  background-color: #c9a84c;
+  color: #1E2F3D;
+  font-weight: 700;
+  border: none;
+  padding: 14px 32px;
+}
+
+.carousel-slide .button-container a.button:hover {
+  background-color: #b8963e;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(0,0,0,0.35);
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.4);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  padding: 0;
+}
+
+.carousel-btn:hover { background: rgba(0,0,0,0.6); border-color: #fff; }
+.carousel-btn-prev { left: 20px; }
+.carousel-btn-next { right: 20px; }
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 0;
+  background: #1E2F3D;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #c9a84c;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s;
+}
+
+.carousel-dot.active { background: #c9a84c; }
+
+@media (max-width: 767px) {
+  .carousel-slide { min-height: 300px; }
+  .carousel-slide > div { padding: 32px 20px; }
+  .carousel-btn { width: 40px; height: 40px; font-size: 24px; }
+}
+
+@media (min-width: 1440px) {
+  .carousel-slide { min-height: 620px; }
+}
